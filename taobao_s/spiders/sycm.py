@@ -67,6 +67,8 @@ class TaobaoSpider(scrapy.Spider):
                 item['price'] = price
                 item['num'] = num
                 item['shop_name'] = shop_name
+
+
                 yield item
             button = self.browser.find_elements(By.XPATH,'//a[@class="J_Ajax num icon-tag"]')[-1]
             button.click()
